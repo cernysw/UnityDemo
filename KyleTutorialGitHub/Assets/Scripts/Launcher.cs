@@ -1,5 +1,8 @@
 ﻿using Photon;
 using UnityEngine;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace A.Kyle
 {
@@ -29,6 +32,7 @@ namespace A.Kyle
         public override void OnConnectedToMaster()
         {
             Debug.Log(this + " OnConnectedToMaster");
+            PhotonNetwork.JoinRandomRoom();
         }
 
         public override void OnDisconnectedFromPhoton()
@@ -36,6 +40,16 @@ namespace A.Kyle
             Debug.Log(this + " OnDisconnectedFromPhoton");
         }
 
+        public override void OnPhotonRandomJoinFailed(object[] codeAndMsg)
+        {
+            Debug.LogWarning(this + " OnPhotonRandomJoinFailed(). Calling: PhotonNetwork.CreateRoom(); Details:  " + string.Join(", ",codeAndMsg.Select(o => o.ToString()).ToArray()));
+            PhotonNetwork.CreateRoom(null, new RoomOptions() { MaxPlayers = 4 }, null);
+        }
+
+        public override void OnJoinedRoom()
+        {
+            Debug.Log(this + " OnJoinedRoom()");
+        }
 
     }
 }
