@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 270280215}
   - component: {fileID: 270280216}
   m_Layer: 0
-  m_Name: Launcher
+  m_Name: LauncherGameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
