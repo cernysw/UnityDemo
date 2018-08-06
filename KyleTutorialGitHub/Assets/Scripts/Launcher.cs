@@ -15,6 +15,7 @@ namespace A.Kyle
         // Use this for initialization
         void Start()
         {
+            Debug.Log(this + " Start");
             if (PhotonNetwork.connected)
             {
                 PhotonNetwork.JoinRandomRoom();
@@ -27,12 +28,12 @@ namespace A.Kyle
 
         public override void OnConnectedToMaster()
         {
-            Debug.Log("OnConnectedToMaster");
+            Debug.Log(this + " OnConnectedToMaster");
         }
 
         public override void OnDisconnectedFromPhoton()
         {
-            Debug.Log("OnDisconnectedFromPhoton");
+            Debug.Log(this + " OnDisconnectedFromPhoton");
         }
 
 
