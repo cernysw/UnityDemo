@@ -4,7 +4,7 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace A.Kyle
+namespace Kyle
 {
     public class Launcher : PunBehaviour
     {

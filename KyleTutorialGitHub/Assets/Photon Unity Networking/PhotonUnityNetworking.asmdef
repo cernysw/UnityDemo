@@ -1,0 +1,10 @@
+{
+    "name": "PhotonUnityNetworking",
+    "references": [
+        "PhotonChatApi"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

@@ -398,6 +398,10 @@
       <Project>{7DFA2968-82B4-9AD1-8F2C-E3BA9A5AE9D7}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="PhotonChatApi.csproj">
+      <Project>{63A470C9-E5B4-BAB2-E50C-FA6EA834A794}</Project>
+      <Name>PhotonChatApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
