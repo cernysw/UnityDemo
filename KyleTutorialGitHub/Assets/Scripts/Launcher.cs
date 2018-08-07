@@ -49,7 +49,11 @@ namespace Kyle
         public override void OnJoinedRoom()
         {
             Debug.Log(this + " OnJoinedRoom()");
+            if (PhotonNetwork.room.PlayerCount == 1)
+            {
+                Debug.Log(this + " OnJoinedRoom(): Loading level 1");
+                PhotonNetwork.LoadLevel(1);
+            }
         }
-
     }
 }
