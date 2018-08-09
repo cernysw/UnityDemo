@@ -67,7 +67,7 @@ namespace ExitGames.Demos.DemoAnimator
 
             // #Critical
             // we flag as don't destroy on load so that instance survives level synchronization, thus giving a seamless experience when levels load.
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
 
         /// <summary>
@@ -148,15 +148,15 @@ namespace ExitGames.Demos.DemoAnimator
         /// </summary>
         public void OnTriggerEnter(Collider other)
         {
-            if (!photonView.isMine)
+            // We are only interested in Beamers
+            // we should be using tags but for the sake of distribution, let's simply check by name.
+            if (!other.name.Contains("Beam"))
             {
                 return;
             }
 
 
-            // We are only interested in Beamers
-            // we should be using tags but for the sake of distribution, let's simply check by name.
-            if (!other.name.Contains("Beam"))
+            if (!photonView.isMine)
             {
                 return;
             }

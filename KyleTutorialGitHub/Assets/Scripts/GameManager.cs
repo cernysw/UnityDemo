@@ -8,6 +8,7 @@ namespace Kyle
 {
     public class GameManager : PunBehaviour
     {
+        public GameObject playerPrefab;
         public void Awake()
         {
             Debug.Log(this + " Awake()");
@@ -16,6 +17,7 @@ namespace Kyle
         public void Start()
         {
             Debug.Log(this + " Start()");
+            PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 3f, 0f), Quaternion.identity, 0);
         }
 
         public void OnDestroy()

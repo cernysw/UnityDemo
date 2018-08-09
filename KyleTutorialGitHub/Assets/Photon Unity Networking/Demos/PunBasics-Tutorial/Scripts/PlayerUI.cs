@@ -22,8 +22,6 @@ namespace ExitGames.Demos.DemoAnimator
 	/// </summary>
 	public class PlayerUI : MonoBehaviour {
 
-		#region Public Properties
-
 		[Tooltip("Pixel offset from the player target")]
 		public Vector3 ScreenOffset = new Vector3(0f,30f,0f);
 
@@ -32,10 +30,6 @@ namespace ExitGames.Demos.DemoAnimator
 
 		[Tooltip("UI Slider to display Player's Health")]
 		public Slider PlayerHealthSlider;
-
-		#endregion
-
-		#region Private Properties
 
 		PlayerManager _target;
 
@@ -47,7 +41,6 @@ namespace ExitGames.Demos.DemoAnimator
 
 		Vector3 _targetPosition;
 
-		#endregion
 
 		#region MonoBehaviour Messages
 		
@@ -56,6 +49,7 @@ namespace ExitGames.Demos.DemoAnimator
 		/// </summary>
 		void Awake(){
 
+            Debug.Log(this + " Awake()");
 			this.GetComponent<Transform>().SetParent (GameObject.Find("Canvas").GetComponent<Transform>());
 		}
 

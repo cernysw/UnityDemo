@@ -19,7 +19,7 @@ namespace Kyle
         void Start()
         {
             Debug.Log(this + " Start");
-            if (PhotonNetwork.connected)
+            if (PhotonNetwork.connectionStateDetailed == ClientState.ConnectedToMaster)
             {
                 PhotonNetwork.JoinRandomRoom();
             }
