@@ -18,15 +18,15 @@ public class PlaneController : MonoBehaviour
         var t = this.gameObject.transform;
 
 
-        var rotation = new Vector3();
-        rotation.x = Input.GetAxis("Vertical") * m_rotationSpeed * Time.deltaTime;
-        rotation.y = Input.GetAxis("Horizontal") * m_rotationSpeed * Time.deltaTime;
+        //var rotation = new Vector3();
+        //rotation.x = Input.GetAxis("Vertical") * m_rotationSpeed * Time.deltaTime;
+        //rotation.y = Input.GetAxis("Horizontal") * m_rotationSpeed * Time.deltaTime;
         //rotation.z = Input.GetAxis("Axe3") * _rotationSpeed * Time.deltaTime;
-        t.Rotate(rotation);
+        //t.Rotate(rotation);
 
 
-        //t.Rotate(t.right, Input.GetAxis("Vertical") * m_rotationSpeed * Time.deltaTime, Space.Self);
-        //t.Rotate(t.up, Input.GetAxis("Horizontal") * m_rotationSpeed * Time.deltaTime, Space.Self);
+        t.Rotate(t.right, Input.GetAxis("Vertical") * m_rotationSpeed * Time.deltaTime, Space.World);
+        t.Rotate(t.up, Input.GetAxis("Horizontal") * m_rotationSpeed * Time.deltaTime, Space.World);
         t.position += t.forward * m_speed * Time.deltaTime;
 	}
 }
