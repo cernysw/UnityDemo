@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlaneController : MonoBehaviour
 {
     public float m_speed = 5;
-    public float m_angularSpeed = 5;
+    public float m_rotationSpeed = 5;
 
     void Start ()
     {
@@ -16,9 +16,15 @@ public class PlaneController : MonoBehaviour
 	void Update ()
     {
         var t = this.gameObject.transform;
-        t.Rotate(t.right, Input.GetAxis("Vertical") * m_angularSpeed * Time.deltaTime, Space.Self);
-        t.Rotate(Vector3.up, Input.GetAxis("Horizontal") * m_angularSpeed * Time.deltaTime);
-        t.Translate(t.forward * m_speed * Time.deltaTime);
-		
+
+        var rotation = new Vector3();
+        rotation.x = Input.GetAxis("Vertical") * m_rotationSpeed * Time.deltaTime;
+        rotation.y = Input.GetAxis("Horizontal") * m_rotationSpeed * Time.deltaTime;
+        t.Rotate(rotation);
+        //rotation.z = Input.GetAxis("Axe3") * _rotationSpeed * Time.deltaTime;
+
+        //t.Rotate(t.right, Input.GetAxis("Vertical") * m_rotationSpeed * Time.deltaTime);
+        //t.Rotate(t.up, Input.GetAxis("Horizontal") * m_rotationSpeed * Time.deltaTime);
+        t.position += t.forward * m_speed * Time.deltaTime;
 	}
 }
