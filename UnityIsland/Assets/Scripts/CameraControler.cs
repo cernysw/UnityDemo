@@ -23,10 +23,10 @@ public class CameraControler : MonoBehaviour
 
     void LateUpdate ()
     {
-        // compute desired location
         var target = m_observerObject.transform;
-        var desiredLocalPosition = Quaternion.Euler(m_angleX, m_angleY, 0) * (-Vector3.forward * m_distance);
-        var desiredWorldPosition = target.TransformPoint(desiredLocalPosition);
+
+        // compute desired location
+        var desiredWorldPosition = target.TransformPoint(Quaternion.Euler(m_angleX, m_angleY, 0) * (-Vector3.forward * m_distance));
 
         // move to desired position
         this.gameObject.transform.position = desiredWorldPosition;
