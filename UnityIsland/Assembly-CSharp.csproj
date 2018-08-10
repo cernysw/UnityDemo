@@ -113,6 +113,8 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\UI\TextButtonTransition.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\UI\TextToggleIsOnTransition.cs" />
      <Compile Include="Assets\Scripts\CameraControler.cs" />
+     <Compile Include="Assets\Scripts\ConnectAndJoinRandomRoom.cs" />
+     <Compile Include="Assets\Scripts\MultiplayerManager.cs" />
      <Compile Include="Assets\Scripts\PlaneController.cs" />
      <None Include="Assets\Photon Unity Networking\link.xml" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
