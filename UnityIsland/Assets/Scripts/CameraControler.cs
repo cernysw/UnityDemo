@@ -15,20 +15,21 @@ public class CameraControler : MonoBehaviour
     {
         if (Input.GetButton("Fire2"))
         {
-            m_angleY -= Input.GetAxis("Mouse X") * m_rotationSpeed * Time.deltaTime;
-            m_angleX += Input.GetAxis("Mouse Y") * m_rotationSpeed * Time.deltaTime;
+            m_angleY -= Input.GetAxis("Mouse X") * -m_rotationSpeed * Time.deltaTime;
+            m_angleX += Input.GetAxis("Mouse Y") * -m_rotationSpeed * Time.deltaTime;
         }
     }
-	
+    
 
-	void LateUpdate ()
-	{
+    void LateUpdate ()
+    {
         // compute desired location
-	    var target = m_observerObject.transform;
-        var desiredPosition = target.position + Quaternion.Euler(m_angleX, m_angleY, 0) * (-Vector3.forward * m_distance);
+        var target = m_observerObject.transform;
+        var desiredLocalPosition = Quaternion.Euler(m_angleX, m_angleY, 0) * (-Vector3.forward * m_distance);
+        var desiredWorldPosition = target.TransformPoint(desiredLocalPosition);
 
         // move to desired position
-	    this.transform.position = desiredPosition;
+        this.gameObject.transform.position = desiredWorldPosition;
         this.transform.LookAt(m_observerObject.transform);
-	}
+    }
 }
