@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_spawnPoint: {x: 1000, y: 500, z: -300}
+  m_playerPrefabName: Stealth_Bomber
 --- !u!1 &680062641
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,15 +537,9 @@ Prefab:
       propertyPath: instantiationId
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114638414565948756, guid: a915a3285fc7e49638568c2e6c584872,
-        type: 2}
-      propertyPath: m_speed
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114638414565948756, guid: a915a3285fc7e49638568c2e6c584872,
-        type: 2}
-      propertyPath: m_acceleration
-      value: 100
+    - target: {fileID: 196804, guid: a915a3285fc7e49638568c2e6c584872, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a915a3285fc7e49638568c2e6c584872, type: 2}
