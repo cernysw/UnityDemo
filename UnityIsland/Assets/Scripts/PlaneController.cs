@@ -34,12 +34,13 @@ public class PlaneController : MonoBehaviour
         var rotation = new Vector3();
         rotation.x = (m_holdVertical + Input.GetAxis("Vertical")) * m_rotationSpeed * Time.deltaTime;
         rotation.y = (m_holdHorizontal + Input.GetAxis("Horizontal")) * m_rotationSpeed * Time.deltaTime;
-        //rotation.z = Input.GetAxis("Axe3") * _rotationSpeed * Time.deltaTime;
+        //rotation.z = Input.GetAxis("Axe3") * m_rotationSpeed * Time.deltaTime;
         t.Rotate(rotation);
 
 
         m_speed += Input.GetAxis("Throttle") * m_acceleration * Time.deltaTime;
         m_speed = m_speed < 0 ? 0 : m_speed;
         t.position += t.forward * m_speed * Time.deltaTime;
+
 	}
 }
