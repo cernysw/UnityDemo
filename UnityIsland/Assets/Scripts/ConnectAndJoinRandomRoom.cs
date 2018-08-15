@@ -63,12 +63,17 @@ namespace UnityIsland
 
         public virtual void OnFailedToConnectToPhoton(DisconnectCause cause)
         {
-            Debug.LogError("Cause: " + cause);
+            Debug.LogError(this + " Connection to Photon failed. Cause: " + cause);
+            Debug.LogError(this + " using LocalGameObjectCreator");
+            ServiceLocator.GameObjectCreator = LocalGameObjectCreator.Instance;
+            MultiplayerManager.Instance.CreatePlayer();
         }
 
         public void OnJoinedRoom()
         {
+            //ServiceLocator.GameObjectCreator = PhotonGameObjectCreator.Instance;
             Debug.Log(this + " OnJoinedRoom() called by PUN. Now this client is in a room. From here on, your game would be running. For reference, all callbacks are listed in enum: PhotonNetworkingMessage");
+            throw new NotImplementedException();
         }
     }
 

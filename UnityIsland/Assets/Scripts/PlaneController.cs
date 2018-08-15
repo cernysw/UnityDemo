@@ -5,29 +5,47 @@ namespace UnityIsland
 
     public class PlaneController : Photon.MonoBehaviour
     {
+        public GameObject m_projectilePrefab;
+        //private GameObject m_projectileSpawnPoint;
         public float m_speed = 50;
+        public float m_projectileSpeed = 500;
         public float m_rotationSpeed = 40;
         public float m_acceleration = 50;
         public float m_holdHorizontal = 0;
         public float m_holdVertical = 0;
 
-        void Start()
+        private void Awake()
         {
-
+            //m_projectileSpawnPoint = this.gameObject..transform.FindChild("ProjectileSpawnPoint");
+            
         }
 
-        // Update is called once per frame
         void Update()
         {
             ControlPlane();
+        }
 
+        public void FireProjectile()
+        {
+            var spawnTransform = this.gameObject.transform.Find("ProjectileSpawnPoint");
+            var projectile = Instantiate(m_projectilePrefab);
+            projectile.transform.position = spawnTransform.position;
+            projectile.transform.rotation = spawnTransform.rotation;
+            projectile.GetComponent<Rigidbody>().velocity = projectile.transform.forward * (m_speed + m_projectileSpeed);
+
+            GameObject.Destroy(projectile, 3);
         }
 
         private void ControlPlane()
         {
-            if (this.photonView.isMine)
+            if (this.photonView.isMine || !PhotonNetwork.connected)
             {
                 var t = this.gameObject.transform;
+
+                if (Input.GetButton("Fire1"))
+                {
+                    this.FireProjectile();
+                }
 
                 if (Input.GetKeyDown(KeyCode.Keypad6)) m_holdHorizontal = +1;
                 if (Input.GetKeyDown(KeyCode.Keypad4)) m_holdHorizontal = -1;
