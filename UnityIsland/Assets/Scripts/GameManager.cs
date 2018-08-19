@@ -9,7 +9,7 @@ namespace UnityIsland
     /// This script automatically connects to Photon (using the settings file),
     /// tries to join a random room and creates one if none was found (which is ok).
     /// </summary>
-    public class ConnectAndJoinRandomRoom : Photon.MonoBehaviour
+    public class GameManager : Photon.MonoBehaviour
     {
         /// <summary>Connect automatically? If false you can set this to true later on or call ConnectUsingSettings in your own scripts.</summary>
         public bool AutoConnect = true;
@@ -64,17 +64,36 @@ namespace UnityIsland
         public virtual void OnFailedToConnectToPhoton(DisconnectCause cause)
         {
             Debug.LogError(this + " Connection to Photon failed. Cause: " + cause);
-            Debug.LogError(this + " using LocalGameObjectCreator");
+            Debug.Log(this + " using LocalGameObjectCreator");
             ServiceLocator.GameObjectCreator = LocalGameObjectCreator.Instance;
-            MultiplayerManager.Instance.CreatePlayer();
+            CreatePlayer();
         }
 
         public void OnJoinedRoom()
         {
-            //ServiceLocator.GameObjectCreator = PhotonGameObjectCreator.Instance;
-            Debug.Log(this + " OnJoinedRoom() called by PUN. Now this client is in a room. From here on, your game would be running. For reference, all callbacks are listed in enum: PhotonNetworkingMessage");
-            throw new NotImplementedException();
+            Debug.Log(this + " OnJoinedRoom() called by PUN.");
+            Debug.Log(this + " using PhotonGameObjectCreator");
+            ServiceLocator.GameObjectCreator = PhotonGameObjectCreator.Instance;
+            CreatePlayer();
         }
+
+        public Transform m_playerSpawnPoint;
+
+        public static GameManager Instance { get; private set; }
+
+        private void Awake()
+        {
+            Instance = this;
+        }
+
+        public void CreatePlayer()
+        {
+            Debug.Log(this + " Instantiating ... ");
+            var player = ServiceLocator.GameObjectCreator.CreateStealthBomber(m_playerSpawnPoint);
+            player.GetComponent<MeshRenderer>().material.color = Color.red;
+            GameObject.FindObjectOfType<Camera>().GetComponent<CameraControler>().m_observerObject = player;
+        }
+
     }
 
 }
