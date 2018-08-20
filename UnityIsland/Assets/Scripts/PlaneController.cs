@@ -15,6 +15,7 @@ namespace UnityIsland
         public float m_holdVertical = 0;
         public int  m_ammo = 1000;
         public int Ping;
+        public float TimePassed;
         private bool m_isFiring = false;
 
         private void Awake()
@@ -30,10 +31,13 @@ namespace UnityIsland
         {
             ControlPlane();
             Ping = PhotonNetwork.GetPing();
+            TimePassed = GetComponent<PhotonTransformView>().m_PositionControl.m_timePassed;
+
         }
 
         void Start()
         {
+
 
         }
 

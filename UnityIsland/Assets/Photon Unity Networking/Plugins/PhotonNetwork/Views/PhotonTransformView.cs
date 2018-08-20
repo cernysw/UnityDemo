@@ -36,7 +36,7 @@ public class PhotonTransformView : MonoBehaviour, IPunObservable
     [SerializeField]
 	public PhotonTransformViewScaleModel m_ScaleModel = new PhotonTransformViewScaleModel();
 
-	PhotonTransformViewPositionControl m_PositionControl;
+	public PhotonTransformViewPositionControl m_PositionControl;
 	PhotonTransformViewRotationControl m_RotationControl;
 	PhotonTransformViewScaleControl m_ScaleControl;
 

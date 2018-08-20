@@ -148,6 +148,8 @@ public class PhotonTransformViewPositionControl
         return m_NetworkPosition;
     }
 
+
+    public float m_timePassed;
     /// <summary>
     /// Calculates an estimated position based on the last synchronized position,
     /// the time when the last position was received and the movement speed of the object
@@ -155,7 +157,7 @@ public class PhotonTransformViewPositionControl
     /// <returns>Estimated position of the remote object</returns>
     public Vector3 GetExtrapolatedPositionOffset()
     {
-        float timePassed = (float)( PhotonNetwork.time - m_LastSerializeTime );
+        float timePassed = m_timePassed = (float)( PhotonNetwork.time - m_LastSerializeTime );
 
         if( m_Model.ExtrapolateIncludingRoundTripTime == true )
         {
