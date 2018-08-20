@@ -1,6 +1,11 @@
 ﻿- RPC
+- OnSerialize() - musi implementovat IBservable a byt attachnuty k PhotonView
+- check ammo?
 - server plugin
+
 - chat
 - lobby
+- tests
+- DI
 - svn
 - python
