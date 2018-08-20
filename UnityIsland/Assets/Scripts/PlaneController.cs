@@ -66,7 +66,10 @@ namespace UnityIsland
 
                 m_speed += Input.GetAxis("Throttle") * m_acceleration * Time.deltaTime;
                 m_speed = m_speed < 0 ? 0 : m_speed;
-                t.position += t.forward * m_speed * Time.deltaTime;
+                var speedVector = t.forward * m_speed;
+                t.position += speedVector * Time.deltaTime;
+
+                this.gameObject.GetComponent<PhotonTransformView>().SetSynchronizedValues(speedVector, rotation.y / Time.deltaTime);
             }
         }
     }
