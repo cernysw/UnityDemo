@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 
 namespace UnityIsland
 {
@@ -13,16 +14,27 @@ namespace UnityIsland
         public float m_holdHorizontal = 0;
         public float m_holdVertical = 0;
         public int  m_ammo = 1000;
+        public int Ping;
         private bool m_isFiring = false;
 
         private void Awake()
         {
-            //m_projectileSpawnPoint = this.gameObject..transform.FindChild("ProjectileSpawnPoint");
+            //var second = GameObject.FindGameObjectsWithTag("Player").FirstOrDefault(o => o != this.gameObject);
+            //if (second != null)
+            //{
+            //    this.gameObject.transform.position = second.transform.position - second.transform.forward * 4;
+            //}
         }
 
         void Update()
         {
             ControlPlane();
+            Ping = PhotonNetwork.GetPing();
+        }
+
+        void Start()
+        {
+
         }
 
         [PunRPC]

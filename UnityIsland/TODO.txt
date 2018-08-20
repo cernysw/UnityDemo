@@ -1,11 +1,16 @@
-﻿- RPC
-- OnSerialize() - musi implementovat IBservable a byt attachnuty k PhotonView
-- check ammo?
+﻿TODO:
+ - neinterpolovat, logovat ping + diference
 - server plugin
-
 - chat
 - lobby
-- tests
-- DI
+- tests in Unity
+- DI in Unity
+- PhotonTransformView code
 - svn
 - python
+
+DONE:
+- OnSerialize() 
+   - musi implementovat IBservable a byt attachnuty k PhotonView
+   - funguje pouze pokud jsou v roomu hraci
+   - ObserveOption..

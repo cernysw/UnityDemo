@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 114152734174756526}
   m_Layer: 0
   m_Name: Stealth_Bomber
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,11 +462,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PositionModel:
     SynchronizeEnabled: 1
-    TeleportEnabled: 0
-    TeleportIfDistanceGreaterThan: 30
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 5
     InterpolateOption: 3
     InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 3
+    InterpolateLerpSpeed: 10
     InterpolateMoveTowardsAcceleration: 2
     InterpolateMoveTowardsDeceleration: 2
     InterpolateSpeedCurve:
@@ -513,14 +513,14 @@ MonoBehaviour:
       m_RotationOrder: 4
     ExtrapolateOption: 1
     ExtrapolateSpeed: 1
-    ExtrapolateIncludingRoundTripTime: 0
+    ExtrapolateIncludingRoundTripTime: 1
     ExtrapolateNumberOfStoredPositions: 1
-    DrawErrorGizmo: 0
+    DrawErrorGizmo: 1
   m_RotationModel:
     SynchronizeEnabled: 1
     InterpolateOption: 2
     InterpolateRotateTowardsSpeed: 180
-    InterpolateLerpSpeed: 5
+    InterpolateLerpSpeed: 10
   m_ScaleModel:
     SynchronizeEnabled: 0
     InterpolateOption: 0
@@ -539,9 +539,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_projectilePrefab: {fileID: 1894749085966020, guid: 41b378481efec6d4591dbcb0741f4e1e,
     type: 2}
-  m_speed: 50
+  m_speed: 0
   m_projectileSpeed: 500
   m_rotationSpeed: 40
   m_acceleration: 100
   m_holdHorizontal: 0
   m_holdVertical: 0
+  m_ammo: 1000
+  Ping: 0

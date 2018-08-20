@@ -126,7 +126,6 @@
     <Compile Include="Assets\Scripts\PhotonGameObjectCreator.cs" />
     <Compile Include="Assets\Scripts\PlaneController.cs" />
     <Compile Include="Assets\Scripts\ServiceLocator.cs" />
-    <None Include="TODO.txt" />
     <None Include="Assets\Photon Unity Networking\link.xml" />
     <None Include="Assets\Photon Unity Networking\readme.txt" />
     <None Include="Assets\Photon Unity Networking\changelog.txt" />
