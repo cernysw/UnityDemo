@@ -1,13 +1,19 @@
 ﻿TODO:
- - neinterpolovat, logovat ping + diference
-- server plugin
-- chat
+- server plugin: 
+	https://dashboard.photonengine.com/download/Photon-Server-SDK_v4-0-29-11263.exe
+	https://doc.photonengine.com/en-us/onpremise/current/getting-started/photon-server-in-5min
+	fire, no ammo
+- neinterpolovat, logovat ping + diference
 - lobby
 - tests in Unity
 - DI in Unity
-- PhotonTransformView code
+- persistence
 - svn
 - python
+- chat
+
+Q:
+- jakym zpusobme se vyuzivaji Unity scripty na serveru
 
 DONE:
 - OnSerialize() 

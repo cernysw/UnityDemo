@@ -57,7 +57,7 @@ namespace UnityIsland
         public virtual void OnPhotonRandomJoinFailed()
         {
             Debug.Log("OnPhotonRandomJoinFailed() was called by PUN. No random room available, so we create one. Calling: PhotonNetwork.CreateRoom(null, new RoomOptions() {maxPlayers = 4}, null);");
-            PhotonNetwork.CreateRoom(null, new RoomOptions() {MaxPlayers = 4}, null);
+            PhotonNetwork.CreateRoom(null, new RoomOptions() {MaxPlayers = 4, Plugins = new string[] {TODO: add plugin}}, null);
         }
 
         // the following methods are implemented to give you some context. re-implement them as needed.
