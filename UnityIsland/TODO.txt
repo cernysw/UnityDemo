@@ -2,21 +2,21 @@
 - server plugin: 
 	https://dashboard.photonengine.com/download/Photon-Server-SDK_v4-0-29-11263.exe
 	https://doc.photonengine.com/en-us/onpremise/current/getting-started/photon-server-in-5min
-	fire, no ammo
-- neinterpolovat, logovat ping + diference
+	podivat se jak funguje RPX zevnitr => da se udelat v jednom procesu?
 - lobby
 - tests in Unity
 - DI in Unity
-- persistence
 - svn
 - python
 - chat
+- neinterpolovat, logovat ping + diference
+- persistence
 
 Q:
 - jakym zpusobme se vyuzivaji Unity scripty na serveru
 
 DONE:
 - OnSerialize() 
-   - musi implementovat IBservable a byt attachnuty k PhotonView
+   - musi implementovat IObservable a byt attachnuty k PhotonView
    - funguje pouze pokud jsou v roomu hraci
    - ObserveOption..
