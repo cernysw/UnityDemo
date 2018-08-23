@@ -1,17 +1,12 @@
 ﻿TODO:
-- server plugin: 
-	https://dashboard.photonengine.com/download/Photon-Server-SDK_v4-0-29-11263.exe
-	https://doc.photonengine.com/en-us/onpremise/current/getting-started/photon-server-in-5min
-	podivat se jak funguje RPX zevnitr => da se udelat v jednom procesu?
-- lobby - daji se data synchronizovat i v lobby?
 - DI in Unity
+- lobby - daji se data synchronizovat i v lobby?
 - svn
+- UI in Unity
+- Pathfinding in Unity
 - python
 - chat
-
 - predelat PhotonNetwork 2x peer v jednom procesu
-- tests in Unity
-- neinterpolovat, logovat ping + diference
 - persistence
 
 Q:
