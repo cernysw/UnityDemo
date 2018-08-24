@@ -1,18 +1,21 @@
 ﻿TODO:
-- DI in Unity
-- lobby - daji se data synchronizovat i v lobby?
-- svn
 - UI in Unity
 - Pathfinding in Unity
+- profiling - mnozstvi prenesenych dat
+- Survival Shooter Tutorial
 - python
 - chat
-- predelat PhotonNetwork 2x peer v jednom procesu
-- persistence
+- persistence in unity?
+
+
+
 
 Q:
 - jakym zpusobme se vyuzivaji Unity scripty na serveru
 
 DONE:
+- predelat PhotonNetwork 2x peer v jednom procesu - nejde
+- lobby - daji se data synchronizovat i v lobby - asi NE
 - OnSerialize() 
    - musi implementovat IObservable a byt attachnuty k PhotonView
    - funguje pouze pokud jsou v roomu hraci
