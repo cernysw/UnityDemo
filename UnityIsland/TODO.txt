@@ -1,7 +1,6 @@
 ﻿TODO:
 - UI in Unity
 - Pathfinding in Unity
-- profiling - mnozstvi prenesenych dat
 - Survival Shooter Tutorial
 - python
 - chat
