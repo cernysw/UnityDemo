@@ -1,10 +1,10 @@
 ﻿TODO:
+- animation
+- C# job system
+- ECS
 - Survival Shooter Tutorial
 - chat
 - persistence in unity?
-
-
-
 
 Q:
 - jakym zpusobme se vyuzivaji Unity scripty na serveru
