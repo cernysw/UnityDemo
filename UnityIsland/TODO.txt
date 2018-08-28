@@ -1,8 +1,5 @@
 ﻿TODO:
-- UI in Unity
-- Pathfinding in Unity
 - Survival Shooter Tutorial
-- python
 - chat
 - persistence in unity?
 

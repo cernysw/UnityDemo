@@ -94,6 +94,8 @@ namespace UnityIsland
             var player = ServiceLocator.GameObjectCreator.CreateStealthBomber(m_playerSpawnPoint);
             player.GetComponent<MeshRenderer>().material.color = Color.red;
             GameObject.FindObjectOfType<Camera>().GetComponent<CameraControler>().m_observerObject = player;
+            GameObject.Find("HUD").GetComponent<HUDController>().tracedObject = player;
+
         }
 
     }
