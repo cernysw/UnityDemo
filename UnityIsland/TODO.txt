@@ -1,8 +1,15 @@
 ﻿TODO:
 - animation
-- C# job system
-- https://www.youtube.com/watch?v=kwnb9Clh2Is&t=1s
-- https://github.com/stella3d/job-system-cookbook
+- C# job system: https://www.youtube.com/watch?v=AXUvnk7Jws4
+- ECS: 
+	https://www.youtube.com/watch?v=kwnb9Clh2Is&t=1s
+	https://www.youtube.com/embed/GEuT5-oCu_I?autoplay=1&disablekb=1&iv_load_policy=3&modestbranding=1&showinfo=0&html5=1	
+- ECS playlist https://www.youtube.com/playlist?list=PLX2vGYjWbI0RuXtGMYKqChoZC2b-H4tck
+- C# job system samples: https://github.com/stella3d/job-system-cookbook
+- ECS samples:
+	https://github.com/Unity-Technologies/EntityComponentSystemSamples
+	https://github.com/keijiro/Voxelman	
+- profiler: https://docs.unity3d.com/Manual/Profiler.html
 
 - ECS
 - Survival Shooter Tutorial
