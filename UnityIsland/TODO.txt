@@ -1,6 +1,9 @@
 ﻿TODO:
 - animation
 - C# job system
+- https://www.youtube.com/watch?v=kwnb9Clh2Is&t=1s
+- https://github.com/stella3d/job-system-cookbook
+
 - ECS
 - Survival Shooter Tutorial
 - chat
